@@ -1,0 +1,204 @@
+// !$*UTF8*$!
+{
+	1D6058900D05DD3D006BFB54 /* SimpleGame */ = {
+		activeExec = 0;
+		executables = (
+			3B4CC0C913E9B551004F0210 /* SimpleGame */,
+		);
+	};
+	29B97313FDCFA39411CA2CEA /* Project object */ = {
+		activeBuildConfigurationName = Debug;
+		activeExecutable = 3B4CC0C913E9B551004F0210 /* SimpleGame */;
+		activeTarget = 1D6058900D05DD3D006BFB54 /* SimpleGame */;
+		codeSenseManager = 3B4CC0E313E9B551004F0210 /* Code sense */;
+		executables = (
+			3B4CC0C913E9B551004F0210 /* SimpleGame */,
+		);
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					1473,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 334083499;
+			PBXWorkspaceStateSaveDate = 334083499;
+		};
+		perUserProjectItems = {
+			3B4CC0FF13E9B604004F0210 /* XCBuildMessageTextBookmark */ = 3B4CC0FF13E9B604004F0210 /* XCBuildMessageTextBookmark */;
+			3B4CC10013E9B604004F0210 /* PBXTextBookmark */ = 3B4CC10013E9B604004F0210 /* PBXTextBookmark */;
+			3B4CC10613E9B638004F0210 /* PBXTextBookmark */ = 3B4CC10613E9B638004F0210 /* PBXTextBookmark */;
+			3B4CC11413E9B841004F0210 /* PBXTextBookmark */ = 3B4CC11413E9B841004F0210 /* PBXTextBookmark */;
+			3B4CC11513E9B842004F0210 /* PBXTextBookmark */ = 3B4CC11513E9B842004F0210 /* PBXTextBookmark */;
+			3B4CC11613E9B842004F0210 /* PBXTextBookmark */ = 3B4CC11613E9B842004F0210 /* PBXTextBookmark */;
+			3B4CC11713E9B842004F0210 /* PBXTextBookmark */ = 3B4CC11713E9B842004F0210 /* PBXTextBookmark */;
+			3B4CC11813E9B842004F0210 /* PBXTextBookmark */ = 3B4CC11813E9B842004F0210 /* PBXTextBookmark */;
+		};
+		sourceControlManager = 3B4CC0E213E9B551004F0210 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	3B4CC0C913E9B551004F0210 /* SimpleGame */ = {
+		isa = PBXExecutable;
+		activeArgIndices = (
+		);
+		argumentStrings = (
+		);
+		autoAttachOnCrash = 1;
+		breakpointsEnabled = 0;
+		configStateDict = {
+		};
+		customDataFormattersEnabled = 1;
+		dataTipCustomDataFormattersEnabled = 1;
+		dataTipShowTypeColumn = 1;
+		dataTipSortType = 0;
+		debuggerPlugin = GDBDebugging;
+		disassemblyDisplayState = 0;
+		dylibVariantSuffix = "";
+		enableDebugStr = 1;
+		environmentEntries = (
+		);
+		executableSystemSymbolLevel = 0;
+		executableUserSymbolLevel = 0;
+		libgmallocEnabled = 0;
+		name = SimpleGame;
+		savedGlobals = {
+		};
+		showTypeColumn = 0;
+		sourceDirectories = (
+		);
+	};
+	3B4CC0E213E9B551004F0210 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+			repositoryNamesForRoots = {
+				"" = "";
+			};
+		};
+	};
+	3B4CC0E313E9B551004F0210 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	3B4CC0FF13E9B604004F0210 /* XCBuildMessageTextBookmark */ = {
+		isa = PBXTextBookmark;
+		comments = "SimpleGameAppDelegate.h: No such file or directory";
+		fRef = D4082350132F3DE800F44E75 /* SimpleGameAppController.mm */;
+		fallbackIsa = XCBuildMessageTextBookmark;
+		rLen = 1;
+		rLoc = 11;
+		rType = 1;
+	};
+	3B4CC10013E9B604004F0210 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4082350132F3DE800F44E75 /* SimpleGameAppController.mm */;
+		name = "SimpleGameAppController.mm: 12";
+		rLen = 0;
+		rLoc = 248;
+		rType = 0;
+		vrLen = 324;
+		vrLoc = 0;
+	};
+	3B4CC10613E9B638004F0210 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4082350132F3DE800F44E75 /* SimpleGameAppController.mm */;
+		name = "SimpleGameAppController.mm: 20";
+		rLen = 0;
+		rLoc = 409;
+		rType = 0;
+		vrLen = 2046;
+		vrLoc = 0;
+	};
+	3B4CC11413E9B841004F0210 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4082350132F3DE800F44E75 /* SimpleGameAppController.mm */;
+		name = "SimpleGameAppController.mm: 12";
+		rLen = 0;
+		rLoc = 248;
+		rType = 0;
+		vrLen = 481;
+		vrLoc = 0;
+	};
+	3B4CC11513E9B842004F0210 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = D4082350132F3DE800F44E75 /* SimpleGameAppController.mm */;
+		name = "SimpleGameAppController.mm: 33";
+		rLen = 0;
+		rLoc = 1141;
+		rType = 0;
+		vrLen = 2046;
+		vrLoc = 0;
+	};
+	3B4CC11613E9B842004F0210 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BF83638B132875D800F3C033 /* AppDelegate.h */;
+		name = "AppDelegate.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1118;
+		vrLoc = 0;
+	};
+	3B4CC11713E9B842004F0210 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BF83638A132875D800F3C033 /* AppDelegate.cpp */;
+		name = "AppDelegate.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1504;
+		vrLoc = 0;
+	};
+	3B4CC11813E9B842004F0210 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BF83638A132875D800F3C033 /* AppDelegate.cpp */;
+		name = "AppDelegate.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1649;
+		vrLoc = 126;
+	};
+	506EE05D10304ED200A389B3 /* cocos2d libraries */ = {
+		activeExec = 0;
+	};
+	BF83638A132875D800F3C033 /* AppDelegate.cpp */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 1456}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{126, 1649}";
+		};
+	};
+	BF83638B132875D800F3C033 /* AppDelegate.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 681}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1118}";
+		};
+	};
+	D4082350132F3DE800F44E75 /* SimpleGameAppController.mm */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {917, 1274}}";
+			sepNavSelRange = "{248, 0}";
+			sepNavVisRange = "{0, 481}";
+		};
+	};
+}

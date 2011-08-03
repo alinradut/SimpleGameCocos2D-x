@@ -1,7 +1,6 @@
 # set params
-ANDROID_NDK_ROOT=/Users/clw/Development/AndroidNDK
-COCOS2DX_ROOT=/Users/clw/Projects/Cocos2d-x
-GAME_ROOT=$COCOS2DX_ROOT/SimpleGame
+COCOS2DX_ROOT=../libs/cocos2dx
+GAME_ROOT=../
 GAME_ANDROID_ROOT=$GAME_ROOT/android
 RESOURCE_ROOT=$GAME_ROOT/Resource
 

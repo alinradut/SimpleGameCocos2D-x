@@ -2,8 +2,6 @@ package org.cocos2dx.simplegame;
 import org.cocos2dx.lib.Cocos2dxActivity;
 import org.cocos2dx.lib.Cocos2dxGLSurfaceView;
 
-import org.cocos2dx.simplegame.R;
-
 import android.os.Bundle;
 import android.widget.EditText;
 
