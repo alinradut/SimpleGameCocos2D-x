@@ -20,10 +20,7 @@ CCScene* HelloWorld::scene()
 // on "init" you need to initialize your instance
 bool HelloWorld::init()
 {
-	//////////////////////////////
-	// 1. super init first
-	if ( !CCLayer::init() )
-	{
+    if ( !CCColorLayer::initWithColor( ccc4(255,255,255,255) ) )	{
 		return false;
 	}
 
@@ -44,33 +41,61 @@ bool HelloWorld::init()
 	pMenu->setPosition( CCPointZero );
 	this->addChild(pMenu, 1);
 
-	/////////////////////////////
-	// 3. add your codes below...
-
-	// add a label shows "Hello World"
-	// create and initialize a label
-	CCLabelTTF* pLabel = CCLabelTTF::labelWithString("Hello World", "Thonburi", 34);
-
-	// ask director the window size
 	CCSize size = CCDirector::sharedDirector()->getWinSize();
 
-	// position the label on the center of the screen
-	pLabel->setPosition( ccp(size.width / 2, size.height - 20) );
-
-	// add the label as a child to this layer
-	this->addChild(pLabel, 1);
-
-	// add "HelloWorld" splash screen"
-	CCSprite* pSprite = CCSprite::spriteWithFile("HelloWorld.png");
+	CCSprite* player = CCSprite::spriteWithFile("Player.png", CCRectMake(0, 0, 27, 40));
 
 	// position the sprite on the center of the screen
-	pSprite->setPosition( ccp(size.width/2, size.height/2) );
+	player->setPosition( ccp(player->getContentSize().width/2, size.height/2) );
 
 	// add the sprite as a child to this layer
-	this->addChild(pSprite, 0);
+	this->addChild(player, 0);
 	
+    this->schedule( schedule_selector(HelloWorld::gameLogic), 1.0 );
+   
 	return true;
 }
+
+void HelloWorld::gameLogic(cocos2d::ccTime dt)
+{
+    this->addTarget();
+}
+
+void HelloWorld::addTarget()
+{
+	CCSprite *target = CCSprite::spriteWithFile("Target.png", CCRectMake(0, 0, 27, 40));
+	
+    // Determine where to spawn the target along the Y axis
+	CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+	int minY = target->getContentSize().height/2;
+	int maxY = winSize.height - target->getContentSize().height/2;
+	int rangeY = maxY - minY;
+	int actualY = (arc4random() % rangeY) + minY;
+	
+    // Create the target slightly off-screen along the right edge,
+    // and along a random position along the Y axis as calculated above
+	target->setPosition(ccp(winSize.width + target->getContentSize().width/2, actualY));
+	this->addChild(target);
+	
+	// Determine speed of the target
+	int minDuration = 2.0;
+	int maxDuration = 4.0;
+	int rangeDuration = maxDuration - minDuration;
+	int actualDuration = (arc4random() % rangeDuration) + minDuration;
+
+    // Create the actions
+	CCFiniteTimeAction *actionMove = CCMoveTo::actionWithDuration(actualDuration, ccp(-target->getContentSize().width/2, actualY));
+	CCFiniteTimeAction *actionMoveDone = CCCallFuncN::actionWithTarget(this, callfuncN_selector(HelloWorld::spriteMoveFinished));
+    
+    target->runAction(CCSequence::actions(actionMove, actionMoveDone));
+}
+
+void HelloWorld::spriteMoveFinished(CCNode* sender)
+{
+    CCSprite *sprite = (CCSprite *)sender;
+    this->removeChild(sprite, true);
+}
+
 
 void HelloWorld::menuCloseCallback(CCObject* pSender)
 {

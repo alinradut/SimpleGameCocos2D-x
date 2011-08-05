@@ -37,22 +37,71 @@
 					PBXFileDataSource_Target_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 334083499;
-			PBXWorkspaceStateSaveDate = 334083499;
+			PBXPerProjectTemplateStateSaveDate = 334271986;
+			PBXWorkspaceStateSaveDate = 334271986;
 		};
 		perUserProjectItems = {
-			3B4CC0FF13E9B604004F0210 /* XCBuildMessageTextBookmark */ = 3B4CC0FF13E9B604004F0210 /* XCBuildMessageTextBookmark */;
-			3B4CC10013E9B604004F0210 /* PBXTextBookmark */ = 3B4CC10013E9B604004F0210 /* PBXTextBookmark */;
-			3B4CC10613E9B638004F0210 /* PBXTextBookmark */ = 3B4CC10613E9B638004F0210 /* PBXTextBookmark */;
-			3B4CC11413E9B841004F0210 /* PBXTextBookmark */ = 3B4CC11413E9B841004F0210 /* PBXTextBookmark */;
+			3B1780F913EC95FF007F9CB9 /* PBXTextBookmark */ = 3B1780F913EC95FF007F9CB9 /* PBXTextBookmark */;
+			3B17810E13EC9709007F9CB9 /* PBXTextBookmark */ = 3B17810E13EC9709007F9CB9 /* PBXTextBookmark */;
+			3B17811C13EC9852007F9CB9 /* PBXTextBookmark */ = 3B17811C13EC9852007F9CB9 /* PBXTextBookmark */;
+			3B17811D13EC9852007F9CB9 /* PBXTextBookmark */ = 3B17811D13EC9852007F9CB9 /* PBXTextBookmark */;
+			3B17811E13EC9852007F9CB9 /* PBXTextBookmark */ = 3B17811E13EC9852007F9CB9 /* PBXTextBookmark */;
 			3B4CC11513E9B842004F0210 /* PBXTextBookmark */ = 3B4CC11513E9B842004F0210 /* PBXTextBookmark */;
 			3B4CC11613E9B842004F0210 /* PBXTextBookmark */ = 3B4CC11613E9B842004F0210 /* PBXTextBookmark */;
-			3B4CC11713E9B842004F0210 /* PBXTextBookmark */ = 3B4CC11713E9B842004F0210 /* PBXTextBookmark */;
-			3B4CC11813E9B842004F0210 /* PBXTextBookmark */ = 3B4CC11813E9B842004F0210 /* PBXTextBookmark */;
 		};
 		sourceControlManager = 3B4CC0E213E9B551004F0210 /* Source Control */;
 		userBuildSettings = {
 		};
+	};
+	3B1780F913EC95FF007F9CB9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BF83638A132875D800F3C033 /* AppDelegate.cpp */;
+		name = "AppDelegate.cpp: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1854;
+		vrLoc = 882;
+	};
+	3B17810E13EC9709007F9CB9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BF83631C13286EF300F3C033 /* HelloWorldScene.h */;
+		name = "HelloWorldScene.h: 15";
+		rLen = 0;
+		rLoc = 426;
+		rType = 0;
+		vrLen = 634;
+		vrLoc = 0;
+	};
+	3B17811C13EC9852007F9CB9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BF835DF01328687E00F3C033 /* CCActionInterval.h */;
+		name = "CCActionInterval.h: 284";
+		rLen = 48;
+		rLoc = 8506;
+		rType = 0;
+		vrLen = 1433;
+		vrLoc = 7752;
+	};
+	3B17811D13EC9852007F9CB9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BF83631B13286EF300F3C033 /* HelloWorldScene.cpp */;
+		name = "HelloWorldScene.cpp: 76";
+		rLen = 105;
+		rLoc = 2284;
+		rType = 0;
+		vrLen = 1686;
+		vrLoc = 1134;
+	};
+	3B17811E13EC9852007F9CB9 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = BF83631B13286EF300F3C033 /* HelloWorldScene.cpp */;
+		name = "HelloWorldScene.cpp: 76";
+		rLen = 19;
+		rLoc = 2346;
+		rType = 0;
+		vrLen = 1782;
+		vrLoc = 1134;
 	};
 	3B4CC0C913E9B551004F0210 /* SimpleGame */ = {
 		isa = PBXExecutable;
@@ -98,45 +147,6 @@
 		isa = PBXCodeSenseManager;
 		indexTemplatePath = "";
 	};
-	3B4CC0FF13E9B604004F0210 /* XCBuildMessageTextBookmark */ = {
-		isa = PBXTextBookmark;
-		comments = "SimpleGameAppDelegate.h: No such file or directory";
-		fRef = D4082350132F3DE800F44E75 /* SimpleGameAppController.mm */;
-		fallbackIsa = XCBuildMessageTextBookmark;
-		rLen = 1;
-		rLoc = 11;
-		rType = 1;
-	};
-	3B4CC10013E9B604004F0210 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D4082350132F3DE800F44E75 /* SimpleGameAppController.mm */;
-		name = "SimpleGameAppController.mm: 12";
-		rLen = 0;
-		rLoc = 248;
-		rType = 0;
-		vrLen = 324;
-		vrLoc = 0;
-	};
-	3B4CC10613E9B638004F0210 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D4082350132F3DE800F44E75 /* SimpleGameAppController.mm */;
-		name = "SimpleGameAppController.mm: 20";
-		rLen = 0;
-		rLoc = 409;
-		rType = 0;
-		vrLen = 2046;
-		vrLoc = 0;
-	};
-	3B4CC11413E9B841004F0210 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = D4082350132F3DE800F44E75 /* SimpleGameAppController.mm */;
-		name = "SimpleGameAppController.mm: 12";
-		rLen = 0;
-		rLoc = 248;
-		rType = 0;
-		vrLen = 481;
-		vrLoc = 0;
-	};
 	3B4CC11513E9B842004F0210 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = D4082350132F3DE800F44E75 /* SimpleGameAppController.mm */;
@@ -157,34 +167,36 @@
 		vrLen = 1118;
 		vrLoc = 0;
 	};
-	3B4CC11713E9B842004F0210 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = BF83638A132875D800F3C033 /* AppDelegate.cpp */;
-		name = "AppDelegate.cpp: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1504;
-		vrLoc = 0;
-	};
-	3B4CC11813E9B842004F0210 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = BF83638A132875D800F3C033 /* AppDelegate.cpp */;
-		name = "AppDelegate.cpp: 1";
-		rLen = 0;
-		rLoc = 0;
-		rType = 0;
-		vrLen = 1649;
-		vrLoc = 126;
-	};
 	506EE05D10304ED200A389B3 /* cocos2d libraries */ = {
 		activeExec = 0;
 	};
+	BF835DF01328687E00F3C033 /* CCActionInterval.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 9256}}";
+			sepNavSelRange = "{8506, 48}";
+			sepNavVisRange = "{7752, 1433}";
+		};
+	};
+	BF83631B13286EF300F3C033 /* HelloWorldScene.cpp */ = {
+		uiCtxt = {
+			sepNavFolds = "{\n    c =     (\n                {\n            l = \"ccTime duration\";\n            r = \"{2346, 19}\";\n            s = 1;\n        },\n                {\n            l = \"CCPoint position\";\n            r = \"{2367, 20}\";\n            s = 1;\n        }\n    );\n    r = \"{0, 2919}\";\n    s = 0;\n}";
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 1235}}";
+			sepNavSelRange = "{2346, 1}";
+			sepNavVisRange = "{1134, 1745}";
+		};
+	};
+	BF83631C13286EF300F3C033 /* HelloWorldScene.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 677}}";
+			sepNavSelRange = "{426, 0}";
+			sepNavVisRange = "{0, 634}";
+		};
+	};
 	BF83638A132875D800F3C033 /* AppDelegate.cpp */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1651, 1456}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1651, 1495}}";
 			sepNavSelRange = "{0, 0}";
-			sepNavVisRange = "{126, 1649}";
+			sepNavVisRange = "{882, 1854}";
 		};
 	};
 	BF83638B132875D800F3C033 /* AppDelegate.h */ = {
