@@ -23,6 +23,9 @@ public:
 
 	// implement the "static node()" method manually
 	LAYER_NODE_FUNC(HelloWorld);
+	
+private:
+	void ccTouchesEnded(cocos2d::CCSet *pTouches, cocos2d::CCEvent *pEvent);
 };
 
 #endif // __HELLOWORLD_SCENE_H__
