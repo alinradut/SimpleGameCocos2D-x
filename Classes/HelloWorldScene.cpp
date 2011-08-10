@@ -2,6 +2,25 @@
 
 USING_NS_CC;
 
+HelloWorld::~HelloWorld()
+{
+	if (_targets)
+	{
+		_targets->release();
+		_targets = NULL;
+	}
+	
+	if (_projectiles)
+	{
+		_projectiles->release();
+		_projectiles = NULL;
+	}
+	
+	// cpp don't need to call super dealloc
+	// virtual destructor will do this
+}
+
+
 CCScene* HelloWorld::scene()
 {
 	// 'scene' is an autorelease object
@@ -54,6 +73,12 @@ bool HelloWorld::init()
     this->schedule( schedule_selector(HelloWorld::gameLogic), 1.0 );
    
 	this->setIsTouchEnabled(true);
+	
+	_targets = new CCMutableArray<CCSprite*>;
+	_projectiles = new CCMutableArray<CCSprite*>;
+	
+	this->schedule(schedule_selector(HelloWorld::update));
+	
 	return true;
 }
 
@@ -88,6 +113,9 @@ void HelloWorld::addTarget()
 	CCFiniteTimeAction *actionMove = CCMoveTo::actionWithDuration(actualDuration, ccp(-target->getContentSize().width/2, actualY));
 	CCFiniteTimeAction *actionMoveDone = CCCallFuncN::actionWithTarget(this, callfuncN_selector(HelloWorld::spriteMoveFinished));
     
+	target->setTag(1);
+	_targets->addObject(target);
+	
     target->runAction(CCSequence::actions(actionMove, actionMoveDone));
 }
 
@@ -95,6 +123,11 @@ void HelloWorld::spriteMoveFinished(CCNode* sender)
 {
     CCSprite *sprite = (CCSprite *)sender;
     this->removeChild(sprite, true);
+	if (sprite->getTag() == 1) { // target
+		_targets->removeObject(sprite);
+	} else if (sprite->getTag() == 2) { // projectile
+		_projectiles->removeObject(sprite);
+	}
 }
 
 
@@ -141,9 +174,63 @@ void HelloWorld::ccTouchesEnded(CCSet *pTouches, CCEvent *pEvent)
 	float velocity = 480/1; // 480pixels/1sec
 	float realMoveDuration = length/velocity;
 	
+	projectile->setTag(2);
+	_projectiles->addObject(projectile);
+	
 	// Move projectile to actual endpoint
 	projectile->runAction(CCSequence::actions(CCMoveTo::actionWithDuration(realMoveDuration, realDest), 
 											  CCCallFuncN::actionWithTarget(this, callfuncN_selector(HelloWorld::spriteMoveFinished)),
 											  NULL));
 	
+}
+
+void HelloWorld::update(cocos2d::ccTime dt)
+{
+	CCMutableArray<cocos2d::CCSprite*> *projectilesToDelete = new CCMutableArray<CCSprite *>;
+	
+	CCMutableArray<CCSprite*>::CCMutableArrayIterator it, jt;
+
+	for (it = _projectiles->begin(); it != _projectiles->end(); it++)
+	{
+		CCSprite *projectile = *it;
+		CCRect projectileRect = CCRectMake(
+										   projectile->getPosition().x - (projectile->getContentSize().width/2), 
+										   projectile->getPosition().y - (projectile->getContentSize().height/2), 
+										   projectile->getContentSize().width, 
+										   projectile->getContentSize().height);
+		CCMutableArray<cocos2d::CCSprite*> *targetsToDelete = new CCMutableArray<cocos2d::CCSprite*>;
+		for (jt = _targets->begin(); jt != _targets->end(); jt++)
+		{
+			CCSprite *target = *jt;
+			CCRect targetRect = CCRectMake(
+										   target->getPosition().x - (target->getContentSize().width/2), 
+										   target->getPosition().y - (target->getContentSize().height/2), 
+										   target->getContentSize().width, 
+										   target->getContentSize().height);
+			
+			if (CCRect::CCRectIntersectsRect(projectileRect, targetRect)) {
+				targetsToDelete->addObject(target);
+			}
+		}
+		
+		for (jt = targetsToDelete->begin(); jt != targetsToDelete->end(); jt++) 
+		{
+			_targets->removeObject(*jt);
+			this->removeChild((*jt), true);
+		}
+		
+		if (targetsToDelete->count())
+		{
+			projectilesToDelete->addObject(*it);
+		}
+		
+		targetsToDelete->release();
+	}
+	
+	for (it = projectilesToDelete->begin(); it != projectilesToDelete->end(); it++)
+	{
+		_projectiles->removeObject(*it);
+		this->removeChild(*it, true);
+	}
+	projectilesToDelete->release();
 }
