@@ -1,5 +1,6 @@
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
+#include "GameOverScene.h";
 
 USING_NS_CC;
 
@@ -126,9 +127,16 @@ void HelloWorld::spriteMoveFinished(CCNode* sender)
 {
     CCSprite *sprite = (CCSprite *)sender;
     this->removeChild(sprite, true);
-	if (sprite->getTag() == 1) { // target
+	if (sprite->getTag() == 1) 
+	{ // target
 		_targets->removeObject(sprite);
-	} else if (sprite->getTag() == 2) { // projectile
+		GameOverScene *gameOverScene = GameOverScene::node();
+		gameOverScene->getLayer()->getLabel()->setString("You Lose! :[");
+		CCDirector::sharedDirector()->replaceScene(gameOverScene);
+		
+	} 
+	else if (sprite->getTag() == 2) 
+	{ // projectile
 		_projectiles->removeObject(sprite);
 	}
 }
@@ -221,6 +229,14 @@ void HelloWorld::update(cocos2d::ccTime dt)
 		{
 			_targets->removeObject(*jt);
 			this->removeChild((*jt), true);
+			
+			_projectilesDestroyed++;
+			if (_projectilesDestroyed > 30) {
+				GameOverScene *gameOverScene = GameOverScene::node();
+				_projectilesDestroyed = 0;
+				gameOverScene->getLayer()->getLabel()->setString("You Win!");
+				CCDirector::sharedDirector()->replaceScene(gameOverScene);
+			}
 		}
 		
 		if (targetsToDelete->count())

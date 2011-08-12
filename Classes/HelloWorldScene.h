@@ -33,6 +33,8 @@ private:
 	
 	cocos2d::CCMutableArray<cocos2d::CCSprite*> *_targets;
 	cocos2d::CCMutableArray<cocos2d::CCSprite*> *_projectiles;
+	
+	int _projectilesDestroyed;
 };
 
 #endif // __HELLOWORLD_SCENE_H__
