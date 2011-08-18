@@ -78,8 +78,10 @@ bool AppDelegate::applicationDidFinishLaunching()
 	// turn on display FPS
 	pDirector->setDisplayFPS(true);
 
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
 	pDirector->setDeviceOrientation(kCCDeviceOrientationLandscapeLeft);
-
+#endif
+	
 	// set FPS. the default value is 1.0/60 if you don't call this
 	pDirector->setAnimationInterval(1.0 / 60);
 

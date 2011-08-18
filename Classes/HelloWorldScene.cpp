@@ -81,7 +81,7 @@ bool HelloWorld::init()
 	
 	this->schedule(schedule_selector(HelloWorld::update));
 	CCLOG("Loading music");
-	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("background-music-aac.caf");
+	CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("background-music-aac.caf");
 	
 	return true;
 }
@@ -120,7 +120,7 @@ void HelloWorld::addTarget()
 	target->setTag(1);
 	_targets->addObject(target);
 	
-    target->runAction(CCSequence::actions(actionMove, actionMoveDone));
+    target->runAction(CCSequence::actions(actionMove, actionMoveDone, NULL));
 }
 
 void HelloWorld::spriteMoveFinished(CCNode* sender)
@@ -192,7 +192,7 @@ void HelloWorld::ccTouchesEnded(CCSet *pTouches, CCEvent *pEvent)
 	projectile->runAction(CCSequence::actions(CCMoveTo::actionWithDuration(realMoveDuration, realDest), 
 											  CCCallFuncN::actionWithTarget(this, callfuncN_selector(HelloWorld::spriteMoveFinished)),
 											  NULL));
-	//CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("pew-pew-lei.caf");
+	CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("pew-pew-lei.caf");
 	
 }
 
